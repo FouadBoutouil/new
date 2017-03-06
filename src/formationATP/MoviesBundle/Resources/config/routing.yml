@@ -1,0 +1,24 @@
+formation_atp_Movies_homepage:
+    path: /video/{page}
+    requirements:
+        page: \d+
+    defaults:
+        _controller:  formationATPMoviesBundle:Default:index
+        page: 1
+
+formation_atp_add:
+    path: /video/add
+    defaults:
+        _controller: formationATPMoviesBundle:Default:add
+
+formation_atp_edit:
+    requirements:
+        id: "[0-9]+"
+    path: /video/edit/{id}
+    defaults:
+        _controller: formationATPMoviesBundle:Default:edit
+
+formation_atp_del:
+    path: /video/del
+    defaults:
+        _controller: formationATPMoviesBundle:Default:del

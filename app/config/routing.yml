@@ -1,3 +1,8 @@
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
+formation_atp_core:
+    resource: "@formationATPCoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
+formation_atp:
+    resource: "@formationATPMoviesBundle/resources/config/routing.yml"
+    prefix: /
+

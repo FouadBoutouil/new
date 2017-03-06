@@ -1,0 +1,3 @@
+formation_atp_core_homepage:
+    path:     /
+    defaults: { _controller: formationATPCoreBundle:Default:index }
