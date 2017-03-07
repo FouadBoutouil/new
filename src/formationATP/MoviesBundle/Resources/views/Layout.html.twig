@@ -1,12 +1,24 @@
+{% extends 'formationATPCoreBundle::Layout.html.twig' %}
 
+{% block content %}
+    <div class="row">
+        <nav class="col-md-2 col-sm-2">
+            <ul class="menu">
+                <li><a href="{{ path('formation_atp_add') }}">Ajouter une vidéo</a></li>
+                <li><a href="{{ path('formation_movies_view_category', {'categorie':'category1'}) }}">Catégorie #1</a></li>
+                <li><a href="{{ path('formation_movies_view_category', {'categorie':'category2'}) }}">Catégorie #2</a></li>
+                <li><a href="{{ path('formation_movies_view_category', {'categorie':'category3'}) }}">Catégorie #3</a></li>
+            </ul>
+        </nav>
+        <div class="col-md-10 col-sm-10">
+            {% block lddw_movies %}
+            {% endblock %}
+        </div>
+    </div>
+{% endblock %}
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<p>(Ici on aura nos vidéos)</p>
-</body>
-</html>
+{% block header %}
+    <h1>Les vidéos</h1>
+    <p> retrouvez l'ensemble de nos vidéos </p>
+    <p> Aujourd'hui on est le {{ 'now'|date('d/m/Y') }}</p>
+{% endblock %}

@@ -6,3 +6,7 @@ formation_atp:
     resource: "@formationATPMoviesBundle/resources/config/routing.yml"
     prefix: /
 
+app_bubdle:
+    resource: "@AppBundle/Controller"
+    type: annotation
+

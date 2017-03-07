@@ -1,10 +1,12 @@
 formation_atp_Movies_homepage:
-    path: /video/{page}
+    path: /{_locale}/video/{page}
     requirements:
         page: \d+
+        _locale: fr|en
     defaults:
         _controller:  formationATPMoviesBundle:Default:index
         page: 1
+        _locale: fr
 
 formation_atp_add:
     path: /video/add
@@ -20,5 +22,25 @@ formation_atp_edit:
 
 formation_atp_del:
     path: /video/del
+    requirements:
+        id: "[0-9]+"
     defaults:
         _controller: formationATPMoviesBundle:Default:del
+
+formation_atp_view:
+    path: /video/view/{id}
+    requirements:
+        id: "[0-9]+"
+    defaults:
+        _controller: formationATPMoviesBundle:Default:view
+
+formation_movies_view_category:
+    path: /video/categorie/{categorie}
+    requirements:
+        categorie: "[a-z0-9]+"
+    defaults:
+        _controller: formationATPMoviesBundle:Default:vueCategorie
+
+
+
+

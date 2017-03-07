@@ -1,3 +1,7 @@
 formation_atp_core_homepage:
     path:     /
     defaults: { _controller: formationATPCoreBundle:Default:index }
+formationATP_core_contact:
+    path: /contact
+    defaults:
+        _controller: formationATPCoreBundle:Default:contact
